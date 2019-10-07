@@ -1,6 +1,6 @@
 # Jake's Portfolio 👨🏻‍💻
 
-**This is a place where I keep all of my favorite personal/work projects. You can see it live [here](http://jakeflynn.herokuapp.com).**
+**This is a place where I keep all of my favorite personal/work projects.**
 
 ## Running Locally 🛠
 

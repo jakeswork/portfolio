@@ -4,15 +4,8 @@
   "private": true,
   "homepage": "http://jakeswork.github.io/portfolio",
   "dependencies": {
-    "@types/jest": "24.0.18",
-    "@types/node": "12.7.11",
-    "@types/react": "16.9.5",
-    "@types/react-dom": "16.9.1",
-    "@types/react-jss": "^8.6.4",
-    "@types/react-router-dom": "^5.1.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
-    "gh-pages": "^2.1.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-jss": "^10.0.0",
@@ -41,6 +34,31 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.10.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "24.0.18",
+    "@types/node": "12.7.11",
+    "@types/react": "16.9.5",
+    "@types/react-dom": "16.9.1",
+    "@types/react-jss": "^8.6.4",
+    "@types/react-router-dom": "^5.1.0",
+    "gh-pages": "^2.1.1",
+    "husky": ">=1",
+    "lint-staged": ">=8",
+    "prettier": "1.18.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,json,md}": [
+      "prettier --write",
+      "git add"
     ]
   }
 }

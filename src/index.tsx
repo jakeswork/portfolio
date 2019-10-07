@@ -1,6 +1,6 @@
 import React, { FC, ReactElement } from "react";
 import { render } from "react-dom";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 import { RouteConfiguration } from './index.d';
 import routes from './routes';

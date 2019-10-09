@@ -6,7 +6,9 @@ interface IHomeProps {
 }
 
 const Home: FC<IHomeProps> = () => (
-  <div>Hello, World!</div>
+  <div>
+    Hello, World
+  </div>
 );
 
 export default Home;

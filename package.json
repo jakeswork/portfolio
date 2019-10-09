@@ -4,8 +4,12 @@
   "private": true,
   "homepage": "http://jakeswork.github.io/portfolio",
   "dependencies": {
+    "@types/classnames": "^2.2.9",
+    "circular-std": "^1.0.0",
+    "classnames": "^2.2.6",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "normalize-jss": "^4.0.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-jss": "^10.0.0",

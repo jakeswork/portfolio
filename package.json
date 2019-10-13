@@ -5,6 +5,7 @@
   "homepage": "http://jakeswork.github.io/portfolio",
   "dependencies": {
     "@types/classnames": "^2.2.9",
+    "@types/react-icons": "^3.0.0",
     "circular-std": "^1.0.0",
     "classnames": "^2.2.6",
     "enzyme": "^3.10.0",
@@ -12,6 +13,7 @@
     "normalize-jss": "^4.0.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "react-icons": "^3.7.0",
     "react-jss": "^10.0.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",

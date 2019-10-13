@@ -1,8 +1,10 @@
-import { Theme } from "../../utils/theme";
 import { CSSProperties } from "jss/css";
 
-const defaultStyles = (theme: Theme): CSSProperties => ({
-  color: theme.textPrimary,
+import { Theme } from "../../utils/theme";
+import { ITextProps } from './Text';
+
+const defaultStyles = (theme: Theme, light?: Boolean): CSSProperties => ({
+  color: light ? theme.textWhite : theme.textPrimary,
   fontFamily: theme.fontFamily,
   fontWeight: 700,
   margin: 0,
@@ -10,32 +12,32 @@ const defaultStyles = (theme: Theme): CSSProperties => ({
 });
 
 const styles = (theme: Theme): object => ({
-  h1: {
-    ...defaultStyles(theme),
+  h1: ({ light }: ITextProps) => ({
+    ...defaultStyles(theme, light),
     fontSize: 30,
     marginBottom: 8
-  },
-  h2: {
-    ...defaultStyles(theme),
+  }),
+  h2: ({ light }: ITextProps) => ({
+    ...defaultStyles(theme, light),
     fontSize: 24
-  },
-  h3: {
-    ...defaultStyles(theme),
+  }),
+  h3: ({ light }: ITextProps) => ({
+    ...defaultStyles(theme, light),
     fontSize: 16
-  },
-  caption: {
-    ...defaultStyles(theme),
+  }),
+  caption: ({ light }: ITextProps) => ({
+    ...defaultStyles(theme, light),
     wordWrap: "break-word",
     fontSize: 12,
-    fontWeight: 800,
     letterSpacing: "0.08333333333333333em",
+    marginBottom: 0,
     textTransform: "uppercase"
-  },
-  p: {
-    ...defaultStyles(theme),
+  }),
+  p: ({ bold, light }: ITextProps) => ({
+    ...defaultStyles(theme, light),
     fontSize: 16,
-    fontWeight: 400
-  },
+    fontWeight: bold ? 700 : 400
+  }),
   [theme.media.mobile as any]: {
     h1: {
       fontSize: 48
@@ -43,9 +45,6 @@ const styles = (theme: Theme): object => ({
     h2: {
       fontSize: 40
     },
-    h4: {
-      fontSize: 20
-    }
   }
 });
 

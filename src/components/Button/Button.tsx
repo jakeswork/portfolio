@@ -1,7 +1,8 @@
-import React, { FC, ReactChildren, ReactElement } from "react";
+import React, { FC, ReactChildren, ReactElement, DetailedHTMLProps, HTMLAttributes } from "react";
 import { Classes } from "jss";
+import classNames from "classnames";
 
-export interface IButtonProps {
+export interface IButtonProps extends DetailedHTMLProps<HTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   classes: Classes<"button" | "flat" | "secondary" | "buttonIcon">;
   secondary?: boolean;
   flat?: boolean;
@@ -21,16 +22,17 @@ const Button: FC<IButtonProps> = ({
   success = false,
   danger = false,
   disabled = false,
+  className = "",
   ...props
 }) => {
-  let className = classes.button;
+  let cn = classes.button;
 
-  if (secondary) className = classes.secondary;
+  if (secondary) cn = classes.secondary;
 
-  if (flat) className = classes.flat;
+  if (flat) cn = classes.flat;
 
   return (
-    <button disabled={disabled || success} {...props} className={className}>
+    <button disabled={disabled || success} {...props} className={classNames(cn, className)}>
       { danger ? "Error" : success ? "Success!" : children }
       { icon && React.cloneElement(icon, { className: classes.buttonIcon }) }
     </button>

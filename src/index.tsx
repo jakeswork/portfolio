@@ -13,12 +13,12 @@ const App: FC = (): ReactElement => (
   <ThemeProvider theme={theme}>
     <Router>
       <Switch>
-        {routes.map((route: RouteConfiguration) => (
+        {routes.map(({ path, Component }: RouteConfiguration) => (
           <Route
-            key={route.path}
-            path={route.path}
+            key={path}
+            path={path}
             exact
-            render={() => <route.Component />}
+            render={() => <Component />}
           />
         ))}
       </Switch>

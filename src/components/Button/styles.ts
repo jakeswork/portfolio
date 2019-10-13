@@ -1,7 +1,7 @@
 import { Theme } from "../../utils/theme";
 import { IButtonProps } from "./Button";
 
-const defaultStyles = {
+export const defaultButtonStyle = {
   display: "inline-block",
   textDecoration: "none",
   textAlign: "center",
@@ -13,7 +13,7 @@ const defaultStyles = {
   outline: "none",
   fontWeight: "bold",
   minWidth: 88,
-  margin: "8px 0",
+  margin: 8,
   WebkitAppearance: "none",
   MozAppearance: "none",
   appearance: "none",
@@ -36,7 +36,7 @@ export default (theme: Theme) => ({
     }
   },
   button: {
-    ...defaultStyles,
+    ...defaultButtonStyle,
     background: ({ danger, success, disabled }: IButtonProps) => {
       if (disabled) return theme.colorGrey;
 
@@ -51,13 +51,13 @@ export default (theme: Theme) => ({
     textShadow: "0 1px 0 rgba(0,0,0,0.03)"
   },
   secondary: {
-    ...defaultStyles,
+    ...defaultButtonStyle,
     backgroundColor: "transparent",
-    border: `1px solid ${theme.textSecondary}`,
+    border: `1px solid ${theme.colorPrimary}`,
     color: theme.colorPrimary
   },
   flat: {
-    ...defaultStyles,
+    ...defaultButtonStyle,
     color: theme.colorPrimary,
     border: 0,
     WebkitBoxShadow: 0,

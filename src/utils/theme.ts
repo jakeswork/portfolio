@@ -18,6 +18,7 @@ export interface Theme extends CSSProperties {
   colorGrey?: Color;
   textPrimary?: Color;
   textSecondary?: Color;
+  textWhite?: Color;
   colorRandom(): string;
   media: ThemeMedia;
 }
@@ -27,7 +28,7 @@ const colorBlue = "#2196f3";
 const colorAmber = "#ff9800";
 const theme: Theme = {
   fontFamily: `"CircularStd",-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol`,
-  colorPrimary: "rgb(0, 132, 137)",
+  colorPrimary: "#008489",
   colorSecondary: "#ff5960",
   colorRed: "#f44336",
   colorGreen,
@@ -36,6 +37,7 @@ const theme: Theme = {
   colorGrey: "#ebebeb",
   textPrimary: "#484848",
   textSecondary: "#906e62",
+  textWhite: "#f7ffff",
   media: {
     mobile: "@media all and (max-width: 414px)"
   },

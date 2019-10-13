@@ -1,39 +1,37 @@
 import React, { FC, HTMLAttributes } from "react";
 import { Classes } from "jss";
+import cx from "classnames";
 
-interface ITextProps extends HTMLAttributes<HTMLElement> {
-  bold?: boolean;
+export interface ITextProps extends HTMLAttributes<HTMLElement> {
+  bold?: Boolean;
   classes: Classes<"h1" | "h2" | "h3" | "caption" | "p">;
   children?: any;
-  h1?: boolean;
-  h2?: boolean;
-  h3?: boolean;
-  caption?: boolean;
+  h1?: Boolean;
+  h2?: Boolean;
+  h3?: Boolean;
+  caption?: Boolean;
+  light?: Boolean;
 }
 
 const Text: FC<ITextProps> = ({
-  bold = false,
-  classes,
-  children,
-  h1,
-  h2,
-  h3,
-  caption,
-  style
+  classes = {},
+  children = null,
+  h1 = false,
+  h2 = false,
+  h3 = false,
+  caption = false,
+  className = '',
+  ...props
 }) => {
-  let styleOverride = style;
+  if (h1) return <h1 className={cx(classes.h1, className)} {...props}>{ children }</h1>;
 
-  if (bold) styleOverride = { fontWeight: "bold", ...style };
+  if (h2) return <h2 className={cx(classes.h2, className)} {...props}>{ children }</h2>;
 
-  if (h1) return <h1 style={styleOverride} className={classes.h1}>{ children }</h1>;
+  if (h3) return <h3 className={cx(classes.h3, className)} {...props}>{ children }</h3>;
 
-  if (h2) return <h2 style={styleOverride} className={classes.h2}>{ children }</h2>;
+  if (caption) return <span className={cx(classes.caption, className)} {...props}>{ children }</span>;
 
-  if (h3) return <h3 style={styleOverride} className={classes.h3}>{ children }</h3>;
-
-  if (caption) return <span style={styleOverride} className={classes.caption}>{ children }</span>;
-
-  return <p style={styleOverride} className={classes.p}>{ children }</p>;
+  return <p className={cx(classes.p, className)} {...props}>{ children }</p>;
 };
 
 export default Text;

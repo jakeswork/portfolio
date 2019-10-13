@@ -1,15 +1,15 @@
 export default {
   anchorBottom: {
     position: 'absolute',
-    bottom: 16
+    bottom: 32
   },
   container: {
     position: 'relative'
   },
   header: {
     position: 'absolute',
-    top: 0,
-    right: 16,
+    top: 16,
+    right: 32,
     zIndex: 1
   },
   external: {

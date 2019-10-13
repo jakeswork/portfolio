@@ -5,7 +5,7 @@ import Text from "../../../components/Text";
 import typescriptIcon from "../../../images/typescriptIcon.png";
 
 export default () => (
-  <Pill background="#00000008" icon={<img alt="TypeScript Logo" src={typescriptIcon} style={{ width: 22.5 }} />} >
-    <Text style={{ verticalAlign: 'middle' }} caption>TypeScript</Text>
+  <Pill background="#293d4a" icon={<img alt="TypeScript Logo" src={typescriptIcon} style={{ width: 22.5 }} />} >
+    <Text light style={{ verticalAlign: 'middle' }} caption>TypeScript</Text>
   </Pill>
 );

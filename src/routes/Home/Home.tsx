@@ -1,4 +1,4 @@
-import React, { FC, RefObject, useRef } from 'react';
+import React, { FC, RefObject, useRef } from "react";
 import { Classes } from "jss";
 import { FiGithub, FiLinkedin, FiChevronDown } from "react-icons/fi";
 
@@ -14,7 +14,7 @@ interface IHomeProps {
 
 const Home: FC<IHomeProps> = ({ classes = {} }) => {
   const scrollToRef = (ref: RefObject<HTMLElement>) => (ref && ref.current)
-    && ref.current.scrollIntoView({ behavior: "smooth", block: "end" })
+    && ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
   const projectsRef = useRef(null)
 
   return (

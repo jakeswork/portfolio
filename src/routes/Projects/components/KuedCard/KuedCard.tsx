@@ -24,10 +24,10 @@ const KuedCard: FC<IKuedCardProps> = ({ classes }) => (
     </div>
     <div className={classes.linksWrapper}>
       <Link to="https://kued.ml/" icon={<FiExternalLink />}>
-        Open App
+        Open
       </Link>
       <Link to="https://github.com/jakeswork/kued-api" icon={<FiCode />}>
-        View Source
+        Source
       </Link>
     </div>
   </Card>

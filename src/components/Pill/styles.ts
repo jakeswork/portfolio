@@ -7,8 +7,10 @@ export default {
     padding: '4px 16px',
     margin: 8,
     display: 'inline-block',
+    userSelect: 'none'
   }),
   icon: {
-    marginLeft: 4
+    marginLeft: 4,
+    userSelect: 'none'
   }
 };

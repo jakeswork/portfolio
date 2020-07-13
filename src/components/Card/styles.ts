@@ -5,9 +5,9 @@ export default {
     borderRadius: 4,
     display: "inline-block",
     position: "relative",
-    padding: 32,
+    padding: 24,
     paddingBottom: 24,
-    margin: 8,
+    margin: 16,
     zIndex: 0
   }
 };

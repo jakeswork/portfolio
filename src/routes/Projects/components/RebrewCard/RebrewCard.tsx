@@ -34,10 +34,10 @@ const RebrewCard: FC<IRebrewCardProps> = ({ classes }) => (
     </div>
     <div className={classes.linksWrapper}>
       <Link to ="https://rebrew.jakepflynn.now.sh/" icon={<FiExternalLink />}>
-        Open App
+        Open
       </Link>
       <Link to="https://github.com/jakeswork/rebrew-server" icon={<FiCode />}>
-        View Source
+        Source
       </Link>
     </div>
   </Card>

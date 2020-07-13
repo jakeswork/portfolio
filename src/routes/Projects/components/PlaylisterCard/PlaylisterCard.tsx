@@ -22,10 +22,10 @@ const PlaylisterCard: FC<IPlaylisterCardProps> = ({ classes }) => (
     </div>
     <div className={classes.linksWrapper}>
       <Link to ="https://authentication-api.herokuapp.com/" icon={<FiExternalLink />}>
-        Open App
+        Open
       </Link>
       <Link to="https://github.com/jakeswork/auth-api" icon={<FiCode />}>
-        View Source
+        Source
       </Link>
     </div>
   </Card>

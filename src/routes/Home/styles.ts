@@ -15,5 +15,10 @@ export default {
   external: {
     margin: 8,
     padding: 8
-  }
+  },
+  image: {
+    width: 124,
+    borderRadius: 100,
+    marginBottom: 16
+  },
 };

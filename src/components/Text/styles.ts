@@ -19,7 +19,8 @@ const styles = (theme: Theme): object => ({
   }),
   h2: ({ light }: ITextProps) => ({
     ...defaultStyles(theme, light),
-    fontSize: 24
+    fontSize: 24,
+    marginBottom: 8
   }),
   h3: ({ light }: ITextProps) => ({
     ...defaultStyles(theme, light),
@@ -36,7 +37,8 @@ const styles = (theme: Theme): object => ({
   p: ({ bold, light }: ITextProps) => ({
     ...defaultStyles(theme, light),
     fontSize: 16,
-    fontWeight: bold ? 700 : 400
+    fontWeight: bold ? 700 : 400,
+    marginBottom: 6
   }),
   [theme.media.mobile as any]: {
     h1: {

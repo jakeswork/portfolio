@@ -10,6 +10,7 @@ export interface ITextProps extends HTMLAttributes<HTMLElement> {
   h2?: Boolean;
   h3?: Boolean;
   caption?: Boolean;
+  primaryColor?: boolean;
   light?: Boolean;
 }
 
@@ -20,7 +21,9 @@ const Text: FC<ITextProps> = ({
   h2 = false,
   h3 = false,
   caption = false,
+  primaryColor = false,
   className = '',
+  light = false,
   ...props
 }) => {
   if (h1) return <h1 className={cx(classes.h1, className)} {...props}>{ children }</h1>;

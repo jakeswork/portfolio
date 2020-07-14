@@ -64,6 +64,23 @@ export default (theme: Theme) => ({
     boxShadow: 0,
     background: "transparent"
   },
+  circle: {
+    ...defaultButtonStyle,
+    color: 'white',
+    backgroundColor: theme.colorPrimary,
+    width: 48,
+    height: 48,
+    minWidth: 0,
+    borderRadius: 100,
+    padding: 0,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    '& > svg': {
+      margin: 0,
+      fontSize: 24
+    },
+  },
   buttonIcon: {
     fontSize: 20,
     marginLeft: 8,

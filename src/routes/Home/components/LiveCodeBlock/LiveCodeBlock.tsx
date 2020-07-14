@@ -40,7 +40,8 @@ export default Home`
           paddingBottom: 0,
           margin: 0,
           marginTop: 32,
-          width: 500
+          width: 500,
+          overflow: 'hidden'
         }}
         language="jsx"
         style={darcula}
@@ -54,7 +55,8 @@ export default Home`
           customStyle={{
             margin: 0,
             width: 500,
-            padding: '0 1em'
+            padding: '0 1em',
+            overflow: 'hidden'
           }}
         >
           {codeBlockTwo}
@@ -66,7 +68,8 @@ export default Home`
           customStyle={{
             margin: 0,
             width: 500,
-            padding: '0 1em'
+            padding: '0 1em',
+            overflow: 'hidden'
           }}
         >
           {codeBlockThree}
@@ -83,7 +86,8 @@ export default Home`
           customStyle={{
             margin: 0,
             width: 500,
-            padding: '0 1em'
+            padding: '0 1em',
+            overflow: 'hidden'
           }}
         >
           {`    <Intro />`}
@@ -106,14 +110,14 @@ export default Home`
           borderBottomLeftRadius: 8,
           paddingTop: 0,
           margin: 0,
-          width: 500
+          width: 500,
+          overflow: 'hidden'
         }}
         language="jsx"
         style={darcula}
       >
         {codeBlockFive}
       </SyntaxHighlighter>
-      
     </>
   )
 };

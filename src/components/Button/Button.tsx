@@ -1,16 +1,17 @@
-import React, { FC, ReactChildren, ReactElement, DetailedHTMLProps, HTMLAttributes } from "react";
+import React, { FC, ReactElement, DetailedHTMLProps, HTMLAttributes } from "react";
 import { Classes } from "jss";
 import classNames from "classnames";
 
 export interface IButtonProps extends DetailedHTMLProps<HTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
-  classes: Classes<"button" | "flat" | "secondary" | "buttonIcon">;
+  classes: Classes<"button" | "flat" | "secondary" | "buttonIcon" | "circle">;
   secondary?: boolean;
   flat?: boolean;
-  children?: ReactChildren | string;
   icon?: ReactElement;
   success?: boolean;
   danger?: boolean;
   disabled?: boolean;
+  circle?: boolean;
+  tooltip?: string;
 }
 
 const Button: FC<IButtonProps> = ({
@@ -22,7 +23,9 @@ const Button: FC<IButtonProps> = ({
   success = false,
   danger = false,
   disabled = false,
+  circle = false,
   className = "",
+  tooltip = "",
   ...props
 }) => {
   let cn = classes.button;
@@ -30,6 +33,19 @@ const Button: FC<IButtonProps> = ({
   if (secondary) cn = classes.secondary;
 
   if (flat) cn = classes.flat;
+
+  if (circle) return (
+    <>
+      <button
+        disabled={disabled || success}
+        {...props}
+        className={classNames(cn, classes.circle)}
+        data-tip={tooltip}
+      >
+        { icon }
+      </button>
+    </>
+  )
 
   return (
     <button disabled={disabled || success} {...props} className={classNames(cn, className)}>

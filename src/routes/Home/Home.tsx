@@ -3,9 +3,7 @@ import { Classes } from "jss";
 import { FiGithub, FiLinkedin, FiChevronDown } from "react-icons/fi";
 
 import globalStyles from "../../styles";
-import Text from "../../components/Text";
-import Link from "../../components/Link";
-import Button from "../../components/Button";
+import { Text, Link, Button } from '../../components';
 import Projects from "../Projects";
 import avatar from '../../images/avatar.png';
 import LiveCodeBlock from './components/LiveCodeBlock';

@@ -3,8 +3,12 @@ import { CSSProperties } from "jss/css";
 import { Theme } from "../../utils/theme";
 import { ITextProps } from './Text';
 
-const defaultStyles = (theme: Theme, light?: Boolean): CSSProperties => ({
-  color: light ? theme.textWhite : theme.textPrimary,
+const defaultStyles = (theme: Theme, props: ITextProps): CSSProperties => ({
+  color: (
+    props.light ? theme.textWhite :
+      props.primaryColor ? theme.colorPrimary :
+        theme.textPrimary
+  ),
   fontFamily: theme.fontFamily,
   fontWeight: 700,
   margin: 0,
@@ -12,32 +16,32 @@ const defaultStyles = (theme: Theme, light?: Boolean): CSSProperties => ({
 });
 
 const styles = (theme: Theme): object => ({
-  h1: ({ light }: ITextProps) => ({
-    ...defaultStyles(theme, light),
+  h1: (props: ITextProps) => ({
+    ...defaultStyles(theme, props),
     fontSize: 30,
     marginBottom: 8
   }),
-  h2: ({ light }: ITextProps) => ({
-    ...defaultStyles(theme, light),
+  h2: (props: ITextProps) => ({
+    ...defaultStyles(theme, props),
     fontSize: 24,
     marginBottom: 8
   }),
-  h3: ({ light }: ITextProps) => ({
-    ...defaultStyles(theme, light),
+  h3: (props: ITextProps) => ({
+    ...defaultStyles(theme, props),
     fontSize: 16
   }),
-  caption: ({ light }: ITextProps) => ({
-    ...defaultStyles(theme, light),
+  caption: (props: ITextProps) => ({
+    ...defaultStyles(theme, props),
     wordWrap: "break-word",
     fontSize: 12,
     letterSpacing: "0.08333333333333333em",
     marginBottom: 0,
     textTransform: "uppercase"
   }),
-  p: ({ bold, light }: ITextProps) => ({
-    ...defaultStyles(theme, light),
+  p: (props: ITextProps) => ({
+    ...defaultStyles(theme, props),
     fontSize: 16,
-    fontWeight: bold ? 700 : 400,
+    fontWeight: props.bold ? 700 : 400,
     marginBottom: 6
   }),
   [theme.media.mobile as any]: {

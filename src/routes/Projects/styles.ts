@@ -13,5 +13,9 @@ export default (theme: Theme) => ({
     maxWidth: 1280,
     marginTop: 32,
     textAlign: 'center'
+  },
+  tooltip: {
+    borderRadius: 8,
+    fontFamily: theme.fontFamily,
   }
 });
